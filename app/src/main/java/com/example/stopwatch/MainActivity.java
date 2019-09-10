@@ -51,20 +51,32 @@ public class MainActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 isClicked = !isClicked;
-                if(isClicked){
-                    if(thinkOfANameLater == 0) {thinkOfANameLater = SystemClock.elapsedRealtime();}
+                if (isClicked) {
+                    if (thinkOfANameLater == 0) {
+                        thinkOfANameLater = SystemClock.elapsedRealtime();
+                    }
                     stopWatch.setBase(stopWatch.getBase() + SystemClock.elapsedRealtime() -
                             thinkOfANameLater);
                     stopWatch.start();
                     buttonStart.setText("Stop");
-                }
-                else {
+                } else {
                     stopWatch.stop();
                     buttonStart.setText("Start");
                     thinkOfANameLater = SystemClock.elapsedRealtime();
 
                 }
 
+
+            }
+        });
+        buttonReset.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                stopWatch.setBase(SystemClock.elapsedRealtime());
+                stopWatch.stop();
+                buttonStart.setText("Start");
+                thinkOfANameLater = SystemClock.elapsedRealtime();
+                isClicked = false;
 
             }
         });
@@ -90,6 +102,7 @@ public class MainActivity extends AppCompatActivity {
         super.onPause();
         Log.d(TAG, "onPause: ");
     }
+
     //this activity is completely hidden
     @Override
     protected void onStop() {
