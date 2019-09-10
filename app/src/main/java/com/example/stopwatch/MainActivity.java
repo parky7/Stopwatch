@@ -75,8 +75,9 @@ public class MainActivity extends AppCompatActivity {
                 stopWatch.setBase(SystemClock.elapsedRealtime());
                 stopWatch.stop();
                 buttonStart.setText("Start");
-                thinkOfANameLater = SystemClock.elapsedRealtime();
                 isClicked = false;
+                thinkOfANameLater = SystemClock.elapsedRealtime();
+
 
             }
         });
