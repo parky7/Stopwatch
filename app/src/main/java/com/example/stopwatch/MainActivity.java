@@ -56,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
             // start
         if(!(savedInstanceState == null)){
             isClicked = savedInstanceState.getBoolean(KEY_CHRONOMETER_IS_CLICKED);
-            stopWatch.setBase(savedInstanceState.getLong(KEY_CHRONOMETER_BASE));
+
             pauseTime = savedInstanceState.getLong(KEY_CHRONOMETER_PAUSE_TIME);
 
             if(isClicked){
