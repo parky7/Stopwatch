@@ -3,4 +3,6 @@
     <string name="main_start">Start</string>
     <string name="main_stop">Stop</string>>
     <string name="main_reset">Reset</string>
+    <string name="main_stop">Stop</string>
+    <string name="main_start">Start</string>
 </resources>
